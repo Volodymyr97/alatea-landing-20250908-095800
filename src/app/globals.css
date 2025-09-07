@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ——— Мінімальні фікси, щоб не ламати верстку ——— */
+html { background: #000; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;           /* стабільний vh, не стрибає на мобілях */
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;            /* прибираємо горизонтальний скрол */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Next root */
+#root, #__next { min-height: inherit; background: transparent; }
+
+/* акуратна selection-тема */
+::selection { background: rgba(255,255,255,0.12); color: #fff; }
+
+/* (необов'язково) iOS-стабілізація, якщо є «стриби» адрес-бара */
+@supports (-webkit-touch-callout: none) {
+  html { height: -webkit-fill-available; }
+  body { min-height: -webkit-fill-available; }
+}
+/* --- text shadow & tiny lift utilities --- */
+@layer utilities {
+    .text-shadow-sm { text-shadow: 0 1px 6px rgba(0,0,0,.18); }
+    .text-shadow-md { text-shadow: 0 2px 12px rgba(0,0,0,.28); }
+    .text-shadow-lg { text-shadow: 0 8px 32px rgba(0,0,0,.40); }
+  
+    .hover-lift { transition: transform .35s ease, box-shadow .35s ease; }
+    .hover-lift:hover { transform: translateY(-2px); }
+  }
+  
