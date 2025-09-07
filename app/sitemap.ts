@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = ['', '/services', '/cases', '/about', '/contact', '/privacy', '/terms'].map((path) => ({ 
     url: `${base}${path}`,
     lastModified: new Date('2025-09-07'),
-    changeFrequency: 'monthly',
+    changeFrequency: 'monthly' as const,
     priority: path ? 0.7 : 1.0,
   }));
   return routes;
