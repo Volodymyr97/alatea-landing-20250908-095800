@@ -1,4 +1,5 @@
 // @ts-nocheck
+// @ts-nocheck
 import { draftMode } from 'next/headers';
 import { client } from '@/sanity/client';
 import { pageBySlugQuery } from '@/sanity/queries';
