@@ -1,11 +1,14 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://alatea.group";
+  const base = "https://alateagroup.com";
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
-      { userAgent: "*", disallow: ["/api/", "/studio"] },
+      {
+        userAgent: "*",
+        allow: ["/"],
+        disallow: ["/studio", "/api/"],
+      },
     ],
     sitemap: `${base}/sitemap.xml`,
     host: base,

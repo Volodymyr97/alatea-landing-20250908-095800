@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Ubuntu } from "next/font/google";
+import Script from "next/script";
 
 const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
@@ -9,60 +10,65 @@ const ubuntu = Ubuntu({
   display: "swap",
 });
 
-const SITE_NAME = "Alatea Group";
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://alatea.group";
+// ── SEO base ────────────────────────────────────────────────────────────────
+const siteUrl = "https://alateagroup.com";
+const siteName = "Alatea Group";
+const siteTitle = "Alatea Group — Strategic Growth Partner";
+const siteDescription =
+  "Alatea Group helps brands expand internationally and optimize sales & distribution with go-to-market strategy, partner negotiations, and e-commerce growth.";
 
+// Next metadata (глобально для всіх сторінок)
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  applicationName: SITE_NAME,
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
   title: {
-    default: "Alatea Group — Your strategic growth partner",
-    template: "%s | Alatea Group",
+    default: siteTitle,
+    template: "%s | Alatea Group", // підсторінки будуть "... | Alatea Group"
   },
-  description:
-    "We help brands and distributors expand into new markets, build e-commerce, and drive sustainable growth through end-to-end commercial execution.",
+  description: siteDescription,
   keywords: [
     "Alatea Group",
     "market expansion",
-    "business growth",
-    "distributors",
-    "e-commerce",
-    "international sales",
-    "negotiations",
+    "international expansion",
+    "distribution",
+    "sales advisory",
     "go-to-market",
+    "multi-channel optimization",
+    "negotiation support",
+    "e-commerce growth",
+    "commercial strategy",
+    "product launch",
+    "partner evaluation",
+    "pricing analysis",
   ],
-  authors: [{ name: "Alatea Group" }],
-  creator: "Alatea Group",
-  publisher: "Alatea Group",
-  category: "Business",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "/",
-    siteName: SITE_NAME,
-    title: "Alatea Group — Your strategic growth partner",
-    description:
-      "End-to-end support: market entry, e-commerce set-up, distribution and negotiations.",
+    url: siteUrl,
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
     images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Alatea Group",
-      },
+      { url: "/web-app-manifest-512x512.png", width: 512, height: 512, alt: "Alatea Group" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alatea Group — Your strategic growth partner",
-    description:
-      "End-to-end support: market entry, e-commerce set-up, distribution and negotiations.",
-    images: ["/og.jpg"],
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/web-app-manifest-512x512.png"],
   },
-  manifest: "/site.webmanifest",
-  themeColor: "#000000",
-  colorScheme: "dark",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxSnippet: -1,
+      maxImagePreview: "large",
+      maxVideoPreview: -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -70,39 +76,18 @@ export const metadata: Metadata = {
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [{ rel: "mask-icon", url: "/favicon.svg" }],
   },
+  category: "Business",
 };
 
 export const viewport: Viewport = {
   themeColor: "#000000",
-  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/android-chrome-512x512.png`,
-    sameAs: [],
-  };
-
-  const websiteLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: SITE_NAME,
-    url: SITE_URL,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={query}`,
-      "query-input": "required name=query",
-    },
-  };
-
   return (
     <html lang="en" className={ubuntu.variable} suppressHydrationWarning>
       <body
@@ -113,13 +98,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "
         suppressHydrationWarning
       >
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([jsonLd, websiteLd]),
-          }}
-        />
+        {/* JSON-LD Organization + каталог сервісів */}
+        <Script id="ld-org" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: siteName,
+            url: siteUrl,
+            logo: `${siteUrl}/web-app-manifest-512x512.png`,
+            slogan: "Your strategic growth partner",
+            description: siteDescription,
+            areaServed: "Worldwide",
+            offers: {
+              "@type": "OfferCatalog",
+              name: "Consulting Services",
+              itemListElement: [
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Strategic distribution & sales advisory" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "International market expansion" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial strategy & product launch" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Negotiation support" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "E-commerce growth" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pricing & partner evaluation" } },
+              ],
+            },
+          })}
+        </Script>
+
         <main className="relative">{children}</main>
       </body>
     </html>
