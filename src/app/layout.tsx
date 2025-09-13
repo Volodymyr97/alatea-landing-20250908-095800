@@ -90,7 +90,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={ubuntu.variable} suppressHydrationWarning>
+    <html lang="en"  className={`${ubuntu.variable} ${ubuntu.className} ${ubuntu.variable}`} suppressHydrationWarning>
       <body
         className="
           relative min-h-[100svh]
