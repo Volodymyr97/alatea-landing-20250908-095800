@@ -29,13 +29,13 @@ export default function Features({ blok }: { blok: any }) {
               >
                 {iconUrl && (
                   <div className="mb-4">
-                    <Image decoding="async" loading="lazy"
+                    <Image
                       src={iconUrl}
                       alt=""
                       width={48}
                       height={48}
                       className="opacity-90"
-                    />
+                    / loading="lazy" decoding="async">
                   </div>
                 )}
                 {it?.title && (
