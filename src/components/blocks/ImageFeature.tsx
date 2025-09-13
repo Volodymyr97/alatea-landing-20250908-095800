@@ -73,7 +73,7 @@ export default function ImageFeature({ blok }: { blok: any }) {
                 className="font-serif leading-[1.15] text-balance"
                 style={{
                   color: BLUE,
-                  fontWeight: 700,
+                  fontWeight: 400,
                   fontSize: 'clamp(28px,3.2vw,56px)',
                   textShadow: '0 10px 22px rgba(20,30,75,.18)',
                 }}
