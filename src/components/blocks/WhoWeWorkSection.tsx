@@ -181,7 +181,7 @@ export default function WhoWeWorkSection({ data }: { data: WhoWeWorkData }) {
                 transition={{ duration: .35, ease }}
               >
                 {/* Image */}
-                <div className="relative overflow-hidden" style={{ aspectRatio: `${cardAR} / 1` }}>
+                <div className="relative overflow-hidden" style={{ aspectRatio: `${cardAR} 1` }} />
                   {src ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img

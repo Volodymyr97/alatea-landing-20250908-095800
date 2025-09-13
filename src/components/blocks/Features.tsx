@@ -35,7 +35,7 @@ export default function Features({ blok }: { blok: any }) {
                       width={48}
                       height={48}
                       className="opacity-90"
-                    / loading="lazy" decoding="async">
+                    loading="lazy" decoding="async" />
                   </div>
                 )}
                 {it?.title && (

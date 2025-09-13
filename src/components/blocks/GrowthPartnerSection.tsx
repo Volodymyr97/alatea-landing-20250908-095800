@@ -195,11 +195,11 @@ export default function GrowthPartnerSection({ data }: { data: GrowthPartnerData
                   <div
                     className="relative w-full overflow-hidden"
                     style={{
-                      aspectRatio: `${ratio} / 1`,
+                      aspectRatio: `${ratio} 1`,
                       borderTopLeftRadius: imgRadius,
                       borderTopRightRadius: imgRadius,
                     }}
-                  >
+                   />
                     {src ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
