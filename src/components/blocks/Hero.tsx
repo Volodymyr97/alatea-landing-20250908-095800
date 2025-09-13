@@ -184,7 +184,7 @@ export default function Hero({ blok }: { blok: any }) {
         >
           <div className="mx-auto" style={{ width: "var(--cw)" }}>
             {blok?.logo && (
-              <img
+              <img height="800" width="1200" decoding="async" loading="lazy"
                 src={urlForImage(blok.logo).width(1400).url()}
                 alt=""
                 className="mx-auto mb-6 opacity-90 block"

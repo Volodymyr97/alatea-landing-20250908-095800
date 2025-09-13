@@ -55,3 +55,12 @@ html, body{
 /* опційно: заголовки теж 400, щоб було всюди однаково */
 :where(h1,h2,h3,h4,h5,h6){ font-weight: 400 !important; }
 /* === /ALATEA: UBUNTU LOCK v2 === */
+
+/* === ALATEA: FORCE UBUNTU SITE-WIDE v2 === */
+:root{
+  --font-ubuntu-stack: var(--font-ubuntu, Ubuntu, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif);
+  --font-inter: var(--font-ubuntu);
+}
+html,body{ font-family: var(--font-ubuntu-stack) !important; font-weight: 400 !important; font-style: normal !important; }
+*,*::before,*::after{ font-family: inherit !important; font-weight: inherit !important; font-style: inherit !important; }
+/* === /ALATEA: FORCE UBUNTU SITE-WIDE v2 === */

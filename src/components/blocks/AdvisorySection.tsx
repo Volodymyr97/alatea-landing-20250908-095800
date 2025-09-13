@@ -113,7 +113,7 @@ function CardFace({
 
       {(c.eyebrow || c.iconUrl) && (
         <div className="flex items-center gap-3 mb-3">
-          {c.iconUrl && (/* eslint-disable-next-line @next/next/no-img-element */ <img src={c.iconUrl} alt="" className="h-6 w-6 opacity-80" />)}
+          {c.iconUrl && (/* eslint-disable-next-line @next/next/no-img-element */ <img height="800" width="1200" decoding="async" loading="lazy" src={c.iconUrl} alt="" className="h-6 w-6 opacity-80" />)}
           {c.eyebrow && (
             <span className="uppercase tracking-[0.18em] opacity-80" style={{ fontSize: sizes.eyebrowPx }}>
               {c.eyebrow}

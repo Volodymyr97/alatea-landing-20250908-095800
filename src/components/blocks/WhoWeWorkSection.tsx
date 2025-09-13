@@ -184,7 +184,7 @@ export default function WhoWeWorkSection({ data }: { data: WhoWeWorkData }) {
                 <div className="relative overflow-hidden" style={{ aspectRatio: `${cardAR} 1` }} />
                   {src ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <img height="800" width="1200" decoding="async" loading="lazy"
                       src={src}
                       alt={it.alt || it.title || ""}
                       className="h-full w-full object-cover transition-transform duration-600"

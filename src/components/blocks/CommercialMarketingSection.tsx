@@ -98,7 +98,7 @@ function Medallion({
         />
       ) : url ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={url} alt={alt || ""} style={{ width: size * 0.56, height: size * 0.56 }} />
+        <img height="800" width="1200" decoding="async" loading="lazy" src={url} alt={alt || ""} style={{ width: size * 0.56, height: size * 0.56 }} />
       ) : null}
     </motion.div>
   );

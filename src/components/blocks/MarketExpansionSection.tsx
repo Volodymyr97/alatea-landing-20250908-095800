@@ -65,7 +65,7 @@ function Icon({
   }
   if (url) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={url} alt={alt || ""} className="shrink-0" style={{ width: size, height: size }} />;
+    return <img height="800" width="1200" decoding="async" loading="lazy" src={url} alt={alt || ""} className="shrink-0" style={{ width: size, height: size }} />;
   }
   return <div style={{ width: size, height: size }} aria-hidden />;
 }
