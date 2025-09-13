@@ -51,7 +51,7 @@ export default function TextAppear({ blok }: Props) {
 
   const pMin  = num(blok?.paraSizeMobilePx, 16);
   const pMax  = num(blok?.paraSizeDesktopPx, 22);
-  const pLH   = num(blok?.paraLineHeight, 1.5);
+  const pLH   = num(blok?.paraLineHeight, 3.5);
   const pW    = num(blok?.paraWeight, 400);
   const pItal = Boolean(blok?.paraItalic);
 
