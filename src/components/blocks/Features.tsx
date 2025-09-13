@@ -29,7 +29,7 @@ export default function Features({ blok }: { blok: any }) {
               >
                 {iconUrl && (
                   <div className="mb-4">
-                    <Image
+                    <Image decoding="async" loading="lazy"
                       src={iconUrl}
                       alt=""
                       width={48}

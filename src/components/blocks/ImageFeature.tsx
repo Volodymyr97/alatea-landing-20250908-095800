@@ -49,7 +49,7 @@ export default function ImageFeature({ blok }: { blok: any }) {
           style={{ willChange: 'transform,opacity' }}
         >
           {bg && (
-            <Image
+            <Image decoding="async"
               src={bg}
               alt=""
               width={1800}

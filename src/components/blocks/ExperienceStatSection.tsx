@@ -69,7 +69,7 @@ export default function ExperienceStatSection({ data }: { data: any }) {
         >
           {/* BG */}
           {bgUrl ? (
-            <Image src={bgUrl} alt="" width={2000} height={1000} priority className="block w-full h-auto" />
+            <Image decoding="async" src={bgUrl} alt="" width={2000} height={1000} priority className="block w-full h-auto" />
           ) : (
             <div
               className="w-full aspect-[2/1]"

@@ -120,7 +120,7 @@ export function BlocksRenderer({
           case 'image_feature':
           case 'image-feature':
           case 'imagefeatureblock':
-            return <ImageFeature key={key} blok={blok} />;
+            return <Image decoding="async" loading="lazy"Feature key={key} blok={blok} />;
 
           // одна анімація для текстових блоків
           case 'typingtext':
