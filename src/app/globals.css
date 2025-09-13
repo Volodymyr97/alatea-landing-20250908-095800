@@ -54,7 +54,7 @@ body {
     :where(h1,h2,h3,h4,h5,h6){
     font-family: var(--ubuntu-stack);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 44px;
     line-height: 1.2;
     letter-spacing: 0;
@@ -67,7 +67,7 @@ body {
     font-family: var(--ubuntu-stack);
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 38px;
     line-height: 1.6;
     letter-spacing: 0;
   }
@@ -89,7 +89,7 @@ html, body{
 
 /* Заголовки скрізь (у т.ч. в Hero): 700 */
 :is(h1,h2,h3,h4,h5,h6){
-  font-weight: 700;
+  font-weight: 400;
   font-family: var(--font-ubuntu-stack);
 }
 
