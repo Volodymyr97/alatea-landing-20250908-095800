@@ -126,7 +126,7 @@ export default function ServicesShowcaseSection({ data }: { data: ServicesShowca
   const cols = Math.max(1, Math.min(2, columns));
 
   return (
-    <section className="not-prose w-full" style={{ background: sectionBg }}>
+    <section className="cv-auto not-prose w-full" style={{ background: sectionBg }}>
       <style
         dangerouslySetInnerHTML={{
           __html: `

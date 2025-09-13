@@ -86,6 +86,23 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en"    className={`${ubuntu.variable} ${ubuntu.className} ${`${ubuntu.variable}`} ${ubuntu.className} ${ubuntu.variable} ${ubuntu.className} ${ubuntu.variable}`} suppressHydrationWarning>
+  <head>
+    <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
+  
+    <link rel="dns-prefetch" href="https://cdn.sanity.io" />
+  
+    <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+  
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+  
+    <meta name="theme-color" content="#000000" />
+  </head>
       <body
         className="
           relative min-h-[100svh]

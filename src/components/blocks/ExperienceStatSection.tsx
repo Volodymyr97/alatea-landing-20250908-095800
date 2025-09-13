@@ -33,7 +33,7 @@ export default function ExperienceStatSection({ data }: { data: any }) {
   }));
 
   return (
-    <section className="py-10 md:py-14">
+    <section className="cv-auto py-10 md:py-14">
       {/* фіксований брейкпоінт (1280px) без tailwind */}
       <style
         dangerouslySetInnerHTML={{

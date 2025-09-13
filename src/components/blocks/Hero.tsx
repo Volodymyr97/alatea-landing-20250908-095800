@@ -119,7 +119,7 @@ export default function Hero({ blok }: { blok: any }) {
   return (
     <section
       ref={rootRef}
-      className="relative isolate min-h-[100svh] overflow-hidden"
+      className="cv-auto relative isolate min-h-[100svh] overflow-hidden"
       style={hasMedia && !videoUrl && bgUrl
         ? { backgroundImage: `url("${bgUrl}")`, backgroundSize: "cover", backgroundPosition: "50% 30%" }
         : { background: "radial-gradient(100% 100% at 50% 30%, #0a0b0e 0%, #05060a 60%, #000 100%)" }}

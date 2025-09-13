@@ -92,7 +92,7 @@ export default function WhoWeWorkSection({ data }: { data: WhoWeWorkData }) {
   } = layout || {};
 
   return (
-    <section className="not-prose w-full" style={{ background: sectionBg }}>
+    <section className="cv-auto not-prose w-full" style={{ background: sectionBg }}>
       <style
         dangerouslySetInnerHTML={{
           __html: `

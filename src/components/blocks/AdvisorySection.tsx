@@ -207,7 +207,7 @@ export default function AdvisorySection({ data }: { data: AdvisorySectionData })
     typeof scrubWidth === 'number' ? `min(100%, ${scrubWidth}px)` : `min(100%, ${scrubWidth})`;
 
   return (
-    <section className="not-prose w-full relative" style={{ background: sectionBg, isolation: 'isolate' }}>
+    <section className="cv-auto not-prose w-full relative" style={{ background: sectionBg, isolation: 'isolate' }}>
       {/* Responsive rules */}
       <style
         dangerouslySetInnerHTML={{

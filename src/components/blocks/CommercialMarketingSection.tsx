@@ -143,7 +143,7 @@ export default function CommercialMarketingSection({ data }: { data: CommercialM
   } = layout || {};
 
   return (
-    <section className="not-prose w-full" style={{ background: sectionBg }}>
+    <section className="cv-auto not-prose w-full" style={{ background: sectionBg }}>
       <style
         dangerouslySetInnerHTML={{
           __html: `

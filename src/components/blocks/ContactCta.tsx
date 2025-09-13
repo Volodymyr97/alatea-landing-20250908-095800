@@ -135,7 +135,7 @@ export default function ContactCta({ blok }: { blok: Blok }) {
   return (
     <section
       // фіксовані великі відступи + низ секції
-      className="py-[60px] border-y"                       // ⬅️ рівно 60px зверху і знизу
+      className="cv-auto py-[60px] border-y"                       // ⬅️ рівно 60px зверху і знизу
       style={{ background: sectionBg, borderColor: 'rgba(43,88,214,.25)' }}
     >
       {/* ===== CTA header ===== */}

@@ -99,7 +99,7 @@ export default function GrowthPartnerSection({ data }: { data: GrowthPartnerData
   const imgRadius = Math.max(10, radius - 4);
 
   return (
-    <section className="not-prose w-full" style={{ background: sectionBg }}>
+    <section className="cv-auto not-prose w-full" style={{ background: sectionBg }}>
       <style
         dangerouslySetInnerHTML={{
           __html: `

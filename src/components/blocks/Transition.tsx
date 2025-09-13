@@ -33,7 +33,7 @@ export default function TransitionBlock({ blok }: { blok?: any }) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden"
+      className="cv-auto relative overflow-hidden"
       style={wrap}
       data-transition="dip-to-black"
     >

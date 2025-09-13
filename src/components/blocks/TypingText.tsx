@@ -78,7 +78,7 @@ export default function TypingText({ blok }: Props) {
   const fontClass  = fontFamily === 'ubuntu' ? '[font-family: inherit !important;
 
   return (
-    <section className={`relative py-24 text-white ${fontClass}`}>
+    <section className={`cv-auto relative py-24 text-white ${fontClass}`}>
       <div className={`px-6 ${alignWrap}`} style={{ maxWidth: maxW }}>
         {/* увесь блок анімується одночасно */}
         <motion.div

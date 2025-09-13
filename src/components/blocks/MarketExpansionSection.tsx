@@ -105,7 +105,7 @@ export default function MarketExpansionSection({ data }: { data: MarketExpansion
   const gridCols = Math.max(1, Math.min(3, columns));
 
   return (
-    <section className="not-prose w-full" style={{ background: sectionBg }}>
+    <section className="cv-auto not-prose w-full" style={{ background: sectionBg }}>
       {/* локальний CSS для макета */}
       <style
         dangerouslySetInnerHTML={{

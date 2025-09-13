@@ -8,7 +8,7 @@ export default function Features({ blok }: { blok: any }) {
   const items: any[] = Array.isArray(blok?.items) ? blok.items : [];
 
   return (
-    <section className="px-6 py-24 md:py-40 bg-black text-white">
+    <section className="cv-auto px-6 py-24 md:py-40 bg-black text-white">
       <div className="mx-auto max-w-6xl">
         {title && (
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-10">

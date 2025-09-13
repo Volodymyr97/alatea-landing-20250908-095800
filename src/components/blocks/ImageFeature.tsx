@@ -36,7 +36,7 @@ export default function ImageFeature({ blok }: { blok: any }) {
   };
 
   return (
-    <section className="py-10 md:py-14">
+    <section className="cv-auto py-10 md:py-14">
       <div className="relative mx-auto w-[min(1400px,95vw)]">
         {/* BG + легкий loop-zoom ("дихання") */}
         <motion.div
