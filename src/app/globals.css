@@ -27,7 +27,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   html { height: -webkit-fill-available; }
   body { min-height: -webkit-fill-available; }
-}
+
 /* --- text shadow & tiny lift utilities --- */
 @layer utilities {
     .text-shadow-sm { text-shadow: 0 1px 6px rgba(0,0,0,.18); }
@@ -115,5 +115,4 @@ html, body{
   font-family: inherit!important;
   font-weight: inherit !important;
   font-style: inherit !important;
-}
 /* === /ALATEA: FORCE UBUNTU SITE-WIDE === */
