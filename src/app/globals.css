@@ -29,19 +29,29 @@ body {
   .hover-lift:hover { transform: translateY(-2px); }
 }
 
-/* === ALATEA: FORCE UBUNTU SITE-WIDE === */
+/* === ALATEA: UBUNTU LOCK v2 === */
 :root{
   --font-ubuntu-stack: var(--font-ubuntu, Ubuntu, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif);
+  /* якщо хтось юзає --font-inter — перенаправимо на Ubuntu */
   --font-inter: var(--font-ubuntu);
 }
+
+/* базова сім'я/вага/стиль для всього документа */
 html, body{
-  font-family: inherit !important;
+  font-family: var(--font-ubuntu-stack) !important;
   font-weight: 400 !important;
   font-style: normal !important;
 }
-*, *::before, *::after{
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  font-style: inherit !important;
+
+/* НЕ ставимо *{font-family:…} щоб мінімізатор не "склеїв" з html,body */
+
+/* нейтралізуємо tailwind-утиліти та інлайнові family/вагу */
+:where(.font-sans, .font-serif, .font-mono, .prose, .prose *){
+  font-family: var(--font-ubuntu-stack) !important;
 }
-/* === /ALATEA: FORCE UBUNTU SITE-WIDE === */
+:where(b, strong, .font-bold, .font-semibold){ font-weight: 400 !important; }
+:where([style*="font-family"]){ font-family: var(--font-ubuntu-stack) !important; }
+
+/* опційно: заголовки теж 400, щоб було всюди однаково */
+:where(h1,h2,h3,h4,h5,h6){ font-weight: 400 !important; }
+/* === /ALATEA: UBUNTU LOCK v2 === */

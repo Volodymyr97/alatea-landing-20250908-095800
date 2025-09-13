@@ -4,12 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { Ubuntu } from "next/font/google";
 import Script from "next/script";
 
-const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin", "cyrillic", "cyrillic-ext"],
-  variable: "--font-ubuntu",
-  display: "swap",
-});
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400","700"], variable: "--font-ubuntu", display: "swap" });
 
 // ── SEO base ────────────────────────────────────────────────────────────────
 const siteUrl = "https://alateagroup.com";
@@ -90,7 +85,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en"  className={`${ubuntu.variable} ${ubuntu.className} ${ubuntu.variable}`} suppressHydrationWarning>
+    <html lang="en"    className={`${ubuntu.variable} ${ubuntu.className} ${`${ubuntu.variable}`} ${ubuntu.className} ${ubuntu.variable} ${ubuntu.className} ${ubuntu.variable}`} suppressHydrationWarning>
       <body
         className="
           relative min-h-[100svh]

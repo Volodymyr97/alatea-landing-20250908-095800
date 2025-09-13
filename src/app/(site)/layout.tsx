@@ -5,12 +5,7 @@ import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity";
 import { DisableDraftMode } from "@/components/DisableDraftMode";
 
-const ubuntu = Ubuntu({
-  subsets: ["latin"],
-  weight: ["400","700"],
-  variable: "--font-ubuntu",
-  display: "swap",
-});
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400","700"], variable: "--font-ubuntu", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Rocket + Sanity",
