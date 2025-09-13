@@ -44,9 +44,9 @@ export default function TextAppear({ blok }: Props) {
 
   // Типографіка з адмінки (мобайл/десктоп + вага/курсив)
   const hMin  = num(blok?.headingSizeMobilePx, 28);
-  const hMax  = num(blok?.headingSizeDesktopPx, 56);
+  const hMax  = num(blok?.headingSizeDesktopPx, 44);
   const hLH   = num(blok?.headingLineHeight, 1.08);
-  const hW    = num(blok?.headingWeight, 600);
+  const hW    = num(blok?.headingWeight, 400);
   const hItal = Boolean(blok?.headingItalic);
 
   const pMin  = num(blok?.paraSizeMobilePx, 16);
