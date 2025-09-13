@@ -87,7 +87,7 @@ export default function ExperienceStatSection({ data }: { data: any }) {
               transition={{ duration: 0.55, ease: 'easeOut' }}
             >
               <h2
-                className="font-serif leading-[1.15] text-balance"
+                className="font-ubuntu leading-[1.15] text-balance"
                 style={{
                   color: BLUE,
                   fontWeight: 700,

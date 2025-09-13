@@ -13,7 +13,7 @@ class StudioErrorBoundary extends React.Component<{children: React.ReactNode},{e
       const err:any = this.state.err;
       const problems = Array.isArray(err?.problems) ? err.problems : null;
       return (
-        <div style={{ padding:16, color:'#fff', background:'#111', fontFamily:'ui-monospace, Menlo, Monaco, Consolas, monospace' }}>
+        <div style={{ padding:16, color:'#fff', background:'#111', fontFamily: 'var(--font-ubuntu-stack)' }}>
           <h1 style={{ fontSize:20, marginBottom:12 }}>Sanity SchemaError</h1>
           {problems && (<><h2 style={{ fontSize:16 }}>problems[]</h2><pre style={{ whiteSpace:'pre-wrap' }}>{JSON.stringify(problems, null, 2)}</pre></>)}
           <h2 style={{ fontSize:16, marginTop:16 }}>error (safe)</h2>

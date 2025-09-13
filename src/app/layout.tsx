@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ubuntu } from "@/app/fonts";
 import type { Metadata, Viewport } from "next";
 import { Ubuntu } from "next/font/google";
 import Script from "next/script";
@@ -95,7 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           relative min-h-[100svh]
           bg-black text-white antialiased
           overflow-x-clip selection:bg-white/10 selection:text-white
-        "
+         ${ubuntu.variable}"
         suppressHydrationWarning
       >
         {/* JSON-LD Organization + каталог сервісів */}

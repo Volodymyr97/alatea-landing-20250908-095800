@@ -41,18 +41,13 @@ body {
    TYPOGRAPHY (except HERO = first section)
    — h1–h6: 44px / 700
    — other text: 32px / 400
-   — font-family: Ubuntu
-   ========================================= */
-@layer base {
-  :root{
-    --ubuntu-stack: var(--font-ubuntu), Ubuntu, ui-sans-serif, system-ui,
-      -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+   — font-family: inherit;
   }
 
   /* УСІ ЗАГОЛОВКИ після hero */
   main > :not(:first-child)
     :where(h1,h2,h3,h4,h5,h6){
-    font-family: var(--ubuntu-stack);
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -64,7 +59,7 @@ body {
   main > :not(:first-child)
     :where(p,li,span,a,small,strong,em,blockquote,figcaption,dt,dd,
            label,button,input,textarea,select,th,td){
-    font-family: var(--ubuntu-stack);
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
@@ -81,7 +76,7 @@ body {
 }
 
 html, body{
-  font-family: var(--font-ubuntu-stack);
+  font-family: inherit;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -90,13 +85,13 @@ html, body{
 /* Заголовки скрізь (у т.ч. в Hero): 700 */
 :is(h1,h2,h3,h4,h5,h6){
   font-weight: 400;
-  font-family: var(--font-ubuntu-stack);
+  font-family: inherit;
 }
 
 /* Тіло/підзаголовки: 400 */
 :is(p,span,li,small,blockquote,figcaption,label,td,th,a,button,input,textarea){
   font-weight: 400;
-  font-family: var(--font-ubuntu-stack);
+  font-family: inherit;
 }
 /* === /Ubuntu global (safe) === */
 
@@ -110,14 +105,14 @@ html, body{
 
 /* Глобально фіксуємо сім'ю/вагу/стиль */
 html, body{
-  font-family: var(--font-ubuntu-stack) !important;
+  font-family: inherit!important;
   font-weight: 400 !important;
   font-style: normal !important;
 }
 
 /* Все наслідує — перебиває <b>/<strong> та локальні утиліти без !important */
 *, *::before, *::after{
-  font-family: inherit !important;
+  font-family: inherit!important;
   font-weight: inherit !important;
   font-style: inherit !important;
 }

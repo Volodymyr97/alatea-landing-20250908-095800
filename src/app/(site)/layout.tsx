@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ubuntu } from "@/app/fonts";
 import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity";
 import { DisableDraftMode } from "@/components/DisableDraftMode";

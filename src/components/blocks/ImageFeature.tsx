@@ -70,7 +70,7 @@ export default function ImageFeature({ blok }: { blok: any }) {
               viewport={{ once: true, amount: 0.45 }}
             >
               <h2
-                className="font-serif leading-[1.15] text-balance"
+                className="font-ubuntu leading-[1.15] text-balance"
                 style={{
                   color: BLUE,
                   fontWeight: 400,
