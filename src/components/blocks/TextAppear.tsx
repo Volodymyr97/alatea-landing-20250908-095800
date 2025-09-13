@@ -60,7 +60,7 @@ export default function TextAppear({ blok }: Props) {
   const clampP = cssClamp(pMin, pMax);
 
   const fontFamily = String(blok?.fontFamily ?? 'inherit');
-  const fontClass = fontFamily === 'ubuntu' ? '[font-family: inherit;
+  const fontClass = fontFamily === 'ubuntu' ? 'font-ubuntu' : '';
 
   const alignWrap = align === 'center' ? 'mx-auto text-center' : 'mx-auto md:mx-0 text-left';
 
