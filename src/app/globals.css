@@ -112,7 +112,11 @@ html, body{
 
 /* Все наслідує — перебиває <b>/<strong> та локальні утиліти без !important */
 *, *::before, *::after{
-  font-family: inherit!important;
+    font-family: inherit !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+font-family: inherit!important;
   font-weight: inherit !important;
   font-style: inherit !important;
 /* === /ALATEA: FORCE UBUNTU SITE-WIDE === */
+
