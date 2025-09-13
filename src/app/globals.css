@@ -1,122 +1,47 @@
-/* === /Ubuntu global lock (auto) === */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ——— Мінімальні фікси, щоб не ламати верстку ——— */
+/* Page base */
 html { background: #000; }
-
 body {
   margin: 0;
-  min-height: 100dvh;           /* стабільний vh, не стрибає на мобілях */
+  min-height: 100dvh;
   background: #000;
   color: #fff;
-  overflow-x: hidden;            /* прибираємо горизонтальний скрол */
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* Next root */
 #root, #__next { min-height: inherit; background: transparent; }
-
-/* акуратна selection-тема */
 ::selection { background: rgba(255,255,255,0.12); color: #fff; }
-
-/* (необов'язково) iOS-стабілізація, якщо є «стриби» адрес-бара */
 @supports (-webkit-touch-callout: none) {
   html { height: -webkit-fill-available; }
   body { min-height: -webkit-fill-available; }
+}
 
-/* --- text shadow & tiny lift utilities --- */
+/* Utilities */
 @layer utilities {
-    .text-shadow-sm { text-shadow: 0 1px 6px rgba(0,0,0,.18); }
-    .text-shadow-md { text-shadow: 0 2px 12px rgba(0,0,0,.28); }
-    .text-shadow-lg { text-shadow: 0 8px 32px rgba(0,0,0,.40); }
-  
-    .hover-lift { transition: transform .35s ease, box-shadow .35s ease; }
-    .hover-lift:hover { transform: translateY(-2px); }
-  }
-  /* =========================================
-   TYPOGRAPHY (except HERO = first section)
-   — h1–h6: 44px / 700
-   — other text: 32px / 400
-   — font-family: inherit;
-  }
-
-  /* УСІ ЗАГОЛОВКИ після hero */
-  main > :not(:first-child)
-    :where(h1,h2,h3,h4,h5,h6){
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 1.2;
-    letter-spacing: 0;
-  }
-
-  /* УВЕСЬ НЕ-заголовковий текст після hero */
-  main > :not(:first-child)
-    :where(p,li,span,a,small,strong,em,blockquote,figcaption,dt,dd,
-           label,button,input,textarea,select,th,td){
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 1.6;
-    letter-spacing: 0;
-  }
+  .text-shadow-sm { text-shadow: 0 1px 6px rgba(0,0,0,.18); }
+  .text-shadow-md { text-shadow: 0 2px 12px rgba(0,0,0,.28); }
+  .text-shadow-lg { text-shadow: 0 8px 32px rgba(0,0,0,.40); }
+  .hover-lift { transition: transform .35s ease, box-shadow .35s ease; }
+  .hover-lift:hover { transform: translateY(-2px); }
 }
-
-
-/* === Ubuntu global (safe) === */
-:root{
-  --font-ubuntu-stack: var(--font-ubuntu), Ubuntu, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-}
-
-html, body{
-  font-family: inherit;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-/* Заголовки скрізь (у т.ч. в Hero): 700 */
-:is(h1,h2,h3,h4,h5,h6){
-  font-weight: 400;
-  font-family: inherit;
-}
-
-/* Тіло/підзаголовки: 400 */
-:is(p,span,li,small,blockquote,figcaption,label,td,th,a,button,input,textarea){
-  font-weight: 400;
-  font-family: inherit;
-}
-/* === /Ubuntu global (safe) === */
 
 /* === ALATEA: FORCE UBUNTU SITE-WIDE === */
 :root{
-  /* якщо next/font задає --font-ubuntu — беремо її; інакше fallback на системні */
   --font-ubuntu-stack: var(--font-ubuntu, Ubuntu, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif);
-  /* перекидаємо --font-inter на Ubuntu, раптом хтось її юзає */
   --font-inter: var(--font-ubuntu);
 }
-
-/* Глобально фіксуємо сім'ю/вагу/стиль */
 html, body{
-  font-family: inherit!important;
+  font-family: inherit !important;
   font-weight: 400 !important;
   font-style: normal !important;
 }
-
-/* Все наслідує — перебиває <b>/<strong> та локальні утиліти без !important */
 *, *::before, *::after{
-    font-family: inherit !important;
+  font-family: inherit !important;
   font-weight: inherit !important;
   font-style: inherit !important;
-font-family: inherit!important;
-  font-weight: inherit !important;
-  font-style: inherit !important;
+}
 /* === /ALATEA: FORCE UBUNTU SITE-WIDE === */
-

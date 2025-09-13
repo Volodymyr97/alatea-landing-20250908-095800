@@ -75,7 +75,7 @@ export default function TypingText({ blok }: Props) {
 
   // family (опційно: ubuntu з layout через css var)
   const fontFamily = String(blok?.fontFamily ?? 'inherit');
-  const fontClass  = fontFamily === 'ubuntu' ? '[font-family: inherit;
+  const fontClass  = fontFamily === 'ubuntu' ? '[font-family: inherit !important;
 
   return (
     <section className={`relative py-24 text-white ${fontClass}`}>
