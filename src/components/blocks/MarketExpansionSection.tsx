@@ -88,8 +88,8 @@ export default function MarketExpansionSection({ data }: { data: MarketExpansion
     headingPx = 48,
     itemTitlePx = 24,
     bodyPx = 20,
-    headingFont = "var(--font-inter, system-ui)",
-    bodyFont = "var(--font-inter, system-ui)",
+    headingFont = "var(--font-ubuntu, system-ui)",
+    bodyFont = "var(--font-ubuntu, system-ui)",
   } = typography || {};
 
   /* layout */

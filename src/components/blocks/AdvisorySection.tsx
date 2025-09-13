@@ -174,8 +174,8 @@ export default function AdvisorySection({ data }: { data: AdvisorySectionData })
 
   /* type */
   const {
-    headingFont = 'var(--font-inter, system-ui)',
-    bodyFont = 'var(--font-inter, system-ui)',
+    headingFont = 'var(--font-ubuntu, system-ui)',
+    bodyFont = 'var(--font-ubuntu, system-ui)',
     headingPx = 44,
     cardTitlePx = 30,
     bodyPx = 28,

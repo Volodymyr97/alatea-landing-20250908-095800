@@ -52,8 +52,8 @@ export default defineType({
         { name: 'headlinePx', type: 'number', title: 'Headline px', initialValue: 44 },
         { name: 'cardTitlePx', type: 'number', title: 'Card title px', initialValue: 22 },
         { name: 'bodyPx', type: 'number', title: 'Body px', initialValue: 18 },
-        { name: 'headingFont', type: 'string', title: 'Heading font CSS', initialValue: 'var(--font-inter, system-ui)' },
-        { name: 'bodyFont', type: 'string', title: 'Body font CSS', initialValue: 'var(--font-inter, system-ui)' },
+        { name: 'headingFont', type: 'string', title: 'Heading font CSS', initialValue: 'var(--font-ubuntu, system-ui)' },
+        { name: 'bodyFont', type: 'string', title: 'Body font CSS', initialValue: 'var(--font-ubuntu, system-ui)' },
       ],
     }),
     defineField({

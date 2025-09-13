@@ -57,8 +57,8 @@ export default defineType({
         { name: "cardTitlePx", type: "number", title: "Card title px", initialValue: 22 },
         { name: "bodyPx",      type: "number", title: "Body px", initialValue: 18 },
         { name: "ctaPx",       type: "number", title: "CTA px", initialValue: 18 },
-        { name: "headingFont", type: "string", title: "Heading font CSS var", initialValue: "var(--font-inter, system-ui)" },
-        { name: "bodyFont",    type: "string", title: "Body font CSS var", initialValue: "var(--font-inter, system-ui)" },
+        { name: "headingFont", type: "string", title: "Heading font CSS var", initialValue: "var(--font-ubuntu, system-ui)" },
+        { name: "bodyFont",    type: "string", title: "Body font CSS var", initialValue: "var(--font-ubuntu, system-ui)" },
       ],
     }),
 

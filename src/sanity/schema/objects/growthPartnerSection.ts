@@ -49,8 +49,8 @@ export default defineType({
         { name: "headingPx", title: "Heading size (px)", type: "number", initialValue: 48 },
         { name: "cardTitlePx", title: "Card title size (px)", type: "number", initialValue: 22 },
         { name: "bodyPx", title: "Body size (px)", type: "number", initialValue: 18 },
-        { name: "headingFont", title: "Heading font CSS value", type: "string", initialValue: "var(--font-inter, system-ui)" },
-        { name: "bodyFont", title: "Body font CSS value", type: "string", initialValue: "var(--font-inter, system-ui)" },
+        { name: "headingFont", title: "Heading font CSS value", type: "string", initialValue: "var(--font-ubuntu, system-ui)" },
+        { name: "bodyFont", title: "Body font CSS value", type: "string", initialValue: "var(--font-ubuntu, system-ui)" },
       ],
     }),
 

@@ -122,8 +122,8 @@ export default function CommercialMarketingSection({ data }: { data: CommercialM
     headingPx = 48,
     cardTitlePx = 24,
     bodyPx = 22,
-    headingFont = "var(--font-inter, system-ui)",
-    bodyFont = "var(--font-inter, system-ui)",
+    headingFont = "var(--font-ubuntu, system-ui)",
+    bodyFont = "var(--font-ubuntu, system-ui)",
   } = typography || {};
 
   const {

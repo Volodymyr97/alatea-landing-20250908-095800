@@ -44,14 +44,14 @@ export default defineType({
           name: "headingFont",
           type: "string",
           title: "Heading font preset",
-          description: "Напр.: var(--font-inter), var(--font-manrope), system-ui",
-          initialValue: "var(--font-inter)",
+          description: "Напр.: var(--font-ubuntu), var(--font-manrope), system-ui",
+          initialValue: "var(--font-ubuntu)",
         }),
         defineField({
           name: "bodyFont",
           type: "string",
           title: "Body font preset",
-          initialValue: "var(--font-inter)",
+          initialValue: "var(--font-ubuntu)",
         }),
         defineField({
           name: "headingSize",

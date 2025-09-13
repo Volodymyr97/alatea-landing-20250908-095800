@@ -78,8 +78,8 @@ export default function WhoWeWorkSection({ data }: { data: WhoWeWorkData }) {
     leadPx       = 20,
     cardTitlePx  = 22,
     bodyPx       = 18,
-    headingFont  = "var(--font-inter,system-ui)",
-    bodyFont     = "var(--font-inter,system-ui)",
+    headingFont  = "var(--font-ubuntu, system-ui)",
+    bodyFont     = "var(--font-ubuntu, system-ui)",
   } = typography || {};
 
   const {
